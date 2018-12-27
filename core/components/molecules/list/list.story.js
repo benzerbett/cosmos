@@ -1,15 +1,15 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Example, Stack } from '@auth0/cosmos/_helpers/story-helpers'
+import { Example } from '@auth0/cosmos/_helpers/story-helpers'
 
-import { List, Switch } from '@auth0/cosmos'
+import { List, Switch, StackLayout, Button } from '@auth0/cosmos'
 
 storiesOf('List', module).add('default', () => (
   <Example title="default">
-    <List label="Short List">
-      <div>one</div>
-      <div>two</div>
-      <div>three</div>
+    <List label="Short List" sortable expandable>
+      <List.Header>Header</List.Header>
+      <List.Body>Body</List.Body>
+      <List.Footer>Action</List.Footer>
     </List>
   </Example>
 ))
@@ -17,16 +17,16 @@ storiesOf('List', module).add('default', () => (
 storiesOf('List', module).add('with stack', () => (
   <Example title="with stack">
     <List label="Social">
-      <Stack>
+      <StackLayout>
         <div>github</div>
         <div>GitHub</div>
         <Switch on />
-      </Stack>
-      <Stack>
+      </StackLayout>
+      <StackLayout>
         <div>google-oauth2</div>
         <div>Google</div>
         <Switch />
-      </Stack>
+      </StackLayout>
     </List>
   </Example>
 ))
