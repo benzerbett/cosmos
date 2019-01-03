@@ -57,6 +57,7 @@ import Sidebar from './molecules/sidebar'
 import Stack from './molecules/stack'
 import Table from './molecules/table'
 import Tabs from './molecules/tabs'
+import VerticalNav from './molecules/_vertical-nav'
 
 /* layouts (internal) */
 import AppLayout from './molecules/_app-layout'
@@ -112,5 +113,6 @@ export {
   TextArea,
   TextInput,
   Tooltip,
-  Well
+  Well,
+  VerticalNav
 }

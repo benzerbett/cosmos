@@ -26,22 +26,27 @@ class SidebarLinkGroup extends React.Component {
     const { icon, label, children } = this.props
     const { open } = this.state
     return (
-      <SidebarLinkGroup.Element {...Automation('sidebar.group')} {...this.props}>
+      <React.Fragment>
+        {/* <SidebarLinkGroup.Element {...Automation('sidebar.group')} {...this.props}> */}
         <SidebarLink icon={icon} label={label} onClick={this.handleClick} />
         <SidebarLinkGroup.Content open={open}>{children}</SidebarLinkGroup.Content>
-      </SidebarLinkGroup.Element>
+        {/* </SidebarLinkGroup.Element> */}
+      </React.Fragment>
     )
   }
 }
 
-SidebarLinkGroup.Element = styled.div``
+SidebarLinkGroup.Element = styled.li`
+  /* Fragment */
+  /* background: #000; */
+`
 
-SidebarLinkGroup.Content = styled.div`
+SidebarLinkGroup.Content = styled.ul`
   padding-left: 1.75em;
   overflow: hidden;
   max-height: ${props => (props.open ? props.children.length * 50 + 'px' : '0')};
   visibility: ${props => (props.open ? 'visible' : 'hidden')};
-  transition: max-height 0.5s ease, visibility 0.5s ease;
+  transition: all 0.3s ease-in-out;
 `
 
 SidebarLinkGroup.propTypes = {
