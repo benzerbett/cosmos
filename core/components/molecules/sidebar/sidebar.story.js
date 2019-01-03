@@ -9,7 +9,13 @@ storiesOf('Sidebar', module).add('default', () => (
       <Sidebar.Group>
         <Sidebar.GroupHeader>Something</Sidebar.GroupHeader>
         <Sidebar.Link icon="arrow-right" label="Getting started" url="#/welcome" />
-        <Sidebar.Link icon="dashboard" label="Dashboard" url="#/" new selected />
+        <Sidebar.Link
+          icon="dashboard"
+          label="dashboard dashboard dashboard dashboard dashboard dashboard dashboard dashboard"
+          url="#/"
+          new
+          selected
+        />
         {/* test a long string of text  test a long string of text  test a long string of text  test a long string of text  test a long string of text  test a long string of text  test a long string of text */}
       </Sidebar.Group>
       <Sidebar.Group>
@@ -25,7 +31,7 @@ storiesOf('Sidebar', module).add('default', () => (
         </Sidebar.LinkGroup>
         <Sidebar.Link icon="users" label="Users" url="#/users" />
         <Sidebar.Link icon="rules" label="Rules" url="#/rules" />
-        <Sidebar.Link icon="hooks" label="Hooks" url="#/hooks" />
+        <Sidebar.Link icon="hooks" label="Hooks" url="#/hooks" new />
         <Sidebar.Link icon="multifactor" label="Multifactor Auth" url="#/guardian" />
         <Sidebar.Link icon="hosted-pages" label="Hosted Pages" url="#/login_page" />
         <Sidebar.LinkGroup icon="emails" label="Emails">
